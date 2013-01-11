@@ -11,7 +11,7 @@ standard RCS tags to your git projects:
 	 $Source$
 
 ## Installation ##
-* Clone the Project
+* Download the Project
 * If you already have a .gitattributes file in your projects , please back it up. 
 * Run the attached script (config.sh) by passing your project's root directory path as a parameter.
 ex. sh config.sh ~/repository/CORE/
