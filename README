@@ -1,4 +1,4 @@
-== Revision Control System Keywords ==
+# Revision Control System Keywords #
 
 This module provides a means to add keyword expansion of the following 
 standard RCS tags to your git projects:
@@ -10,7 +10,7 @@ standard RCS tags to your git projects:
 	 $Revision$
 	 $Source$
 
-== Installation ==
+## Installation ##
 * Clone the Project
 * If you already have a .gitattributes file in your projects , please back it up. 
 * Run the attached script (config.sh) by passing your project's root directory path as a parameter.
