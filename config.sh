@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #if found text dont do anything, else insert it into the file
-# exist status is 0 (true) if not found and 1 (false) if found
+# exit status is 0 (true) if not found and 1 (false) if found
 if grep -Lq "rcs-keywords" ~/.gitconfig
 then
     break;
