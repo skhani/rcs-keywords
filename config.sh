@@ -25,4 +25,4 @@ else
 fi
 
 #copy the filter actions to the project directory
-cp -r .git_filters $1 ;
+cp -r .git_filters $1;
