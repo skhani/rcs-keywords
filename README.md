@@ -21,4 +21,4 @@ ex. sh config.sh ~/repository/CORE/
 * Remove hello.php
 * Check it backout (git checkout hello.php)
 * cat hello.php
-* notice the values that were inserted in the keywords
+* Notice the values that were inserted in the keywords
