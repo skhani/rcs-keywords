@@ -24,7 +24,7 @@ reg_date='%Date[^%]*%';
 
 #echo $author;
 #echo $moddate;
-echo $files;
+#echo $files;
 
 #for every file in the files variable find the %Author% and %Date% keywords and replace them
 #with the author who modified them and the date it was modified.
