@@ -1,6 +1,4 @@
 #!/bin/sh
-#%Author: Shahin Mohammadkhani %
-#%Date:  %
 
 # author name
 author=$(git config --global --get user.name);
