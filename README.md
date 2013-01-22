@@ -3,7 +3,7 @@
 This module provides a means to add keyword expansion of the following 
 standard RCS tags to your git projects:
 
-	 %Date$%
+	 %Date%
 	 %Author%
 
 ## Pre Req ##
@@ -20,4 +20,3 @@ ex. sh config.sh ~/repository/CORE/
 * Thats it ! 
 * Now anytime prior to the completion of your commit, the pre-commit script will replace the
   keywords with actual values. No need to change them, Regex takes care of it.
-
