@@ -1,6 +1,6 @@
 #!/bin/sh
-#%Author%
-#%Date%
+#%Author: Shahin Mohammadkhani %
+#%Date:  %
 
 # author name
 author=$(git config --global --get user.name);
@@ -18,20 +18,20 @@ modifiedfiles=$(git status --porcelain | awk 'match($1, "M"){print $2}');
 
 #all the files together with their relative paths
 files="$addedfiles $modifiedfiles";
-#regex author keyword we looking for %Author%
-reg_author='%Author[^%]*%';
+#regex author keyword we looking for %Author: Shahin Mohammadkhani %
+reg_author='%Author: Shahin Mohammadkhani %]*%';
 
-#regex Date keyword we looking for %Date%
-reg_date='%Date[^%]*%';
+#regex Date keyword we looking for %Date:  %
+reg_date='%Date:  %]*%';
 
 #echo $author;
 #echo $moddate;
 echo $files;
 
-#for every file in the files variable find the %Author% and %Date% keywords and replace them
+#for every file in the files variable find the %Author: Shahin Mohammadkhani % and %Date:  % keywords and replace them
 #with the author who modified them and the date it was modified.
 for file in $files; do
-    sed  -i -e "s#$reg_author#%Author: $author %#;s#$reg_date#%Date: $moddate %#" $file                                                 
+    sed  -i -e "s#$reg_author#%Author: Shahin Mohammadkhani %#;s#$reg_date#%Date:  %#" $file                                                 
 done
 
 
