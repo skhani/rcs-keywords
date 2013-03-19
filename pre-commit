@@ -2,6 +2,7 @@
 
 # author name
 author=$(git config --global --get user.name);
+email=$(git config --global --get user.email);
 
 #files added
 #addedfiles=$(git diff --cached --name-only);
@@ -24,7 +25,17 @@ reg_date='%Date[^%]*%';
 for file in $files; do
     #modified date of the file
     moddate=$(date -r $file +"%x %X");
-    sed  -i -e "s#$reg_author#%Author: $author %#;s#$reg_date#%Date: $moddate %#" $file                                                 
+    #mod secs
+    modsecs=$(date --utc --reference=$file +%s)
+    #now
+    nowsecs=$(date +%s)
+    #the delta
+    delta=$(($nowsecs-$modsecs))
+    #update the files if only more than 2 min old. will help git ignore the
+    #continuous file updates when checking in
+    if [ $delta -gt 120 ]; then
+        sed  -i -e "s#$reg_author#%Author: $author $email %#;s#$reg_date#%Date: $moddate %#" $file                                                 
+    fi
 done
 
 
