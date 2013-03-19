@@ -1,7 +1,7 @@
 <?php
 /**
- *  $Author$
- *  $Date$
+ *  %Author%
+ *  %Date%
  *  $Revision$
  *  $Id$
  **/
