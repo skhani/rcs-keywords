@@ -19,11 +19,6 @@ reg_author='%Author[^%]*%';
 
 #regex Date keyword we looking for %Date%
 reg_date='%Date[^%]*%';
-echo $author;
-echo $email;
-echo $files;
-echo $reg_author;
-echo $reg_date;
 
 #for every file in the files variable find the %Author% and %Date% keywords and replace them
 #with the author who modified them and the date it was modified.
@@ -36,9 +31,9 @@ for file in $files; do
     nowsecs=$(date +%s)
     #the delta
     delta=$(($nowsecs-$modsecs))
-    #update the files if only more than 2 min old. will help git ignore the
+    #update the files if only more than 3 sec old. will help git ignore the
     #continuous file updates when checking in
-    if [ $delta -gt 120 ]; then
+    if [ "$delta" -gt "3" ]; then
         sed  -i -e "s#$reg_author#%Author: $author $email %#;s#$reg_date#%Date: $moddate %#" $file                                                 
     fi
 done
