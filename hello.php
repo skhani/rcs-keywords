@@ -5,4 +5,3 @@
  *  $Revision$
  *  $Id$
  **/
-echo 'hello';
