@@ -19,6 +19,11 @@ reg_author='%Author[^%]*%';
 
 #regex Date keyword we looking for %Date%
 reg_date='%Date[^%]*%';
+echo $author;
+echo $email;
+echo $files;
+echo $reg_author;
+echo $reg_date;
 
 #for every file in the files variable find the %Author% and %Date% keywords and replace them
 #with the author who modified them and the date it was modified.
